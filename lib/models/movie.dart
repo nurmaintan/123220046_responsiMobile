@@ -7,6 +7,8 @@ class Movie {
   final String genre;
   final String description;
   final String director;
+  final String language;
+  final String duration;
   final List<String> cast;
   bool isFavorite;
 
@@ -20,6 +22,8 @@ class Movie {
     required this.description,
     required this.director,
     required this.cast,
+    required this.language,
+    required this.duration,
     this.isFavorite = false,
   });
 
@@ -73,6 +77,8 @@ class Movie {
       genre: genreText,
       description: json['description']?.toString() ?? '',
       director: json['director']?.toString() ?? '',
+      language: json['language']?.toString() ?? '',
+      duration: json['duration']?.toString() ?? '',
       cast: castList,
     );
   }
@@ -87,6 +93,8 @@ class Movie {
       'genre': genre,
       'description': description,
       'director': director,
+      'language': language,
+      'duration': duration,
       'cast': cast.join(','),
       'isFavorite': isFavorite ? 1 : 0,
     };
@@ -102,6 +110,8 @@ class Movie {
       genre: map['genre'],
       description: map['description'],
       director: map['director'],
+      language: map['language'],
+      duration: map['duration'],
       cast: (map['cast'] as String).split(','),
       isFavorite: map['isFavorite'] == 1,
     );

@@ -21,9 +21,16 @@ class DatabaseHelper {
 
     return await openDatabase(
       path,
-      version: 1,
+      version: 3, // increment version
       onCreate: _createDB,
+      onUpgrade: _onUpgrade, 
     );
+  }
+
+  Future _onUpgrade(Database db, int oldVersion, int newVersion) async {
+    if (oldVersion < 3) {
+      await db.execute('ALTER TABLE favorites ADD COLUMN duration TEXT NOT NULL DEFAULT ""');
+    }
   }
 
   Future _createDB(Database db, int version) async {
@@ -52,6 +59,8 @@ class DatabaseHelper {
       genre $textType,
       description $textType,
       director $textType,
+      language $textType,
+      duration $textType,
       cast $textType,
       isFavorite $intType
     )

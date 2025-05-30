@@ -196,6 +196,8 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       _buildInfoSection('Release Date', movie.releaseDate),
+                      _buildInfoSection('Language', movie.language),
+                      _buildInfoSection('Duration', movie.duration),
                       _buildInfoSection('Director', movie.director),
                       _buildInfoSection('Description', movie.description),
                       const SizedBox(height: 16),
