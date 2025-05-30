@@ -82,7 +82,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               const Icon(
                 Icons.movie,
                 size: 80,
-                color: Colors.blue,
+                color: const Color.fromARGB(255, 210, 119, 151),
               ),
               const SizedBox(height: 20),
               const Text(

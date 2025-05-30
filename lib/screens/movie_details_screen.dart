@@ -179,7 +179,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                               const SizedBox(width: 16),
                               Chip(
                                 label: Text(movie.genre),
-                                backgroundColor: Colors.blue.shade100,
+                                backgroundColor: const Color.fromARGB(255, 205, 195, 192),
                               ),
                             ],
                           ),
@@ -213,7 +213,7 @@ class _MovieDetailsScreenState extends State<MovieDetailsScreen> {
                         children: movie.cast.map((actor) {
                           return Chip(
                             label: Text(actor),
-                            backgroundColor: Colors.grey.shade200,
+                            backgroundColor: const Color.fromARGB(255, 210, 119, 151),
                           );
                         }).toList(),
                       ),

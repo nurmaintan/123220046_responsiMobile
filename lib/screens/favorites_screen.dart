@@ -164,7 +164,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                                 const SizedBox(height: 4),
                                 Chip(
                                   label: Text(movie.genre),
-                                  backgroundColor: Colors.blue.shade100,
+                                  backgroundColor: const Color.fromARGB(255, 210, 119, 151),
                                 ),
                               ],
                             ),
